@@ -13,7 +13,7 @@ if not HF_TOKEN:
 repo_id = "openai-community/gpt2"
 # Pass max_length and token in model_kwargs as indicated by the warning
 llm = HuggingFaceEndpoint(repo_id=repo_id, max_length=200, temperature= 0.9, token= HF_TOKEN)
-
+llm.invoke("A poem on a rainy day")
 # try:
 #     llm.invoke("A poem on a rainy day")
 # except Exception as e:
